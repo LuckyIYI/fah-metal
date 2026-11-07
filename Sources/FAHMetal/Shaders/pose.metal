@@ -11,8 +11,7 @@
 // Copyright © 2023 Apple Inc. (MLX, MIT licence: https://github.com/ml-explore/mlx/blob/main/LICENSE)
 //
 // Everything is fp16 storage / fp32 accumulation; the ViT residual stream, LayerNorm statistics and softmax are fp32,
-// and the attention keys carry an fp16 hi/lo split (see attn). FAH_RELAXED sets matmul2d's relaxed_precision (as
-// MLX; no measurable accuracy difference here).
+// and the attention keys carry an fp16 hi/lo split (see attn). FAH_RELAXED sets matmul2d's relaxed_precision.
 
 #include <metal_stdlib>
 #include <metal_simdgroup>

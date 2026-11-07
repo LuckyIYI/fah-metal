@@ -25,7 +25,6 @@ Apple M5 (10-core GPU), macOS 26.7, medians.
 | | Batch 1 | Batch 2 |
 |---|---|---|
 | **Metal, this repo** | **4.0 ms** | **7.5 ms** |
-| MLX fp16, same graph | 10.8 ms | 17 ms |
 | Core ML fp32 (FAH's export) | 12.5 ms | 23.5 ms |
 | Metal, simdgroup fallback (no neural accelerators) | 10.7 ms | 20 ms |
 | + contact head | +3 ms | +6 ms |
@@ -34,7 +33,7 @@ Apple M5 (10-core GPU), macOS 26.7, medians.
 
 | | vs | Result |
 |---|---|---|
-| Pose network | PyTorch fp32, 16 crops | uv 0.054 px median (MLX fp16: 0.116), xyz 0.056 mm |
+| Pose network | PyTorch fp32, 16 crops | uv 0.054 px median, xyz 0.056 mm |
 | Pipeline | Python FAH, 412 frames | same detections 412/412, joints2d 0.024 px, joints3d 0.024 mm, rotations 0.016° |
 | Contact head | PyTorch fp32, 16 crops | logits within 0.010; contact decision identical on 6400/6400 points, 16/16 hands |
 
