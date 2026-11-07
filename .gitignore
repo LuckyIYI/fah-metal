@@ -1,0 +1,18 @@
+# build output
+.build/
+.swiftpm/
+DerivedData/
+__pycache__/
+
+# model files written by tools/export.py: derived from the FAH weights and MANO, never commit them
+models/
+*.mlpackage/
+*.mlmodelc/
+fah-s-pose.bin
+fah-s-pose.json
+fah_mano.bin
+*.pkl
+*.pt
+
+# macOS
+.DS_Store

@@ -1,0 +1,41 @@
+fah-metal: FAH-S hand pose estimation on Apple silicon with Metal
+Copyright 2026 the fah-metal authors
+
+Licensed under the Apache License, Version 2.0 (LICENSE).
+
+This product ports the inference pipeline of FAH (Fast and Accurate Hand estimation,
+https://github.com/noahcao/FAH), Copyright 2026 the FAH authors, licensed under the Apache License,
+Version 2.0. The detector decoding, crops, network inputs, output decoding, verification, tracking and
+MANO per-part Procrustes in Sources/FAHMetal follow FAH's fah/estimator.py, fah/detector.py, fah/coreml.py,
+fah/video.py, fah/mano_procrustes.py and bench/methods/fah.py; tools/export.py follows FAH's
+scripts/build_coreml.py.
+
+This product contains no FAH model weights and no MANO data. The files tools/export.py writes are derived
+from them and stay under their own terms: FAH's WEIGHTS_LICENSE (research and non-commercial use, with the
+SAM and DINOv3 pass-through terms) and the MANO licence (https://mano.is.tue.mpg.de/license.html).
+
+Sources/FAHMetal/Shaders/pose.metal adapts code from MLX (https://github.com/ml-explore/mlx): the erf
+approximation, the structure of the steel attention and thin tensor-op GEMM kernels. MLX is licensed as
+follows:
+
+  MIT License
+
+  Copyright © 2023 Apple Inc.
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
