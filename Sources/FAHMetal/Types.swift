@@ -159,7 +159,7 @@ public struct FAHOptions: Sendable {
     public var contact: Bool = true
     /// Compute `FAHHand.meshVertices` (empty when off). Can be switched per frame.
     public var mesh: Bool = true
-    /// Gauss-Newton iterations of the MANO mesh fit behind `FAHHand.meshVertices` (FAH's `--mesh_fit`; ~2 ms each on an
+    /// Gauss-Newton iterations of the MANO mesh fit behind `FAHHand.meshVertices` (FAH's `--mesh_fit`; ~1 ms each on an
     /// M5 CPU). The hand's shape carries over between frames, so one per frame converges on a live video (FAH's live
     /// default is one, too). 0: the closed-form mesh.
     public var meshFitIterations: Int = 1

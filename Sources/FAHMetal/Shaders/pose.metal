@@ -8,7 +8,7 @@
 // shuffle, softmax) is backend independent. The NAX GEMM structure follows MLX's steel thin NAX GEMM, the
 // simdgroup_matrix attention (attn_sg) MLX's steel attention / BaseMMAFrag, and the erf approximation is MLX's:
 //
-// Copyright © 2023-2025 Apple Inc. (MLX, MIT licence: https://github.com/ml-explore/mlx/blob/main/LICENSE)
+// Copyright © 2023 Apple Inc. (MLX, MIT licence: https://github.com/ml-explore/mlx/blob/main/LICENSE)
 //
 // Everything is fp16 storage / fp32 accumulation; the ViT residual stream, LayerNorm statistics and softmax are fp32,
 // and the attention keys carry an fp16 hi/lo split (see attn). FAH_RELAXED sets matmul2d's relaxed_precision (as

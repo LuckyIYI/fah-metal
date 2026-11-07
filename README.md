@@ -9,7 +9,7 @@ Per hand: 21 joints in 2D / 3D, a MANO mesh, MANO rotations and FAH's hand-objec
 
 ## Results
 
-Apple M5 (10-core GPU), macOS 26.7, medians. The GPU was shared with another app during all runs.
+Apple M5 (10-core GPU), macOS 26.7, medians.
 
 **Whole frame** (`fah-check speed`: 120 frames of a 1440 × 1920 video, one hand, tracking):
 
